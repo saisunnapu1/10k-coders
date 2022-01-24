@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook</title>
+	<style>
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		font-family: sans-serif ms;
+
+	}
+	.container
+	{
+		width: 80%;
+		overflow: hidden;
+		margin: auto;
+	}
+	a
+	{
+		text-decoration: none;
+	}
+	header
+	{
+		background-color: #4267b2;
+		color: #fff;
+	}
+	header h1 
+	{
+		float: left;
+	}
+	.right
+	{
+		float: right;
+
+	}
+	.right table
+	{
+		margin: 10px 0px;
+	}
+	.rigth td
+	{
+			padding-left: 8px;
+	}
+	.rigth td a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.right table td a button
+	{
+		background-color: #365899;
+		color: #fff;
+		padding: 3px 8px;
+		text-decoration: none;
+		border: 1px solid #fff;
+		margin-left: 8px; 
+	}
+	section
+	{
+		background-color: #E9EBEE;
+		background-size: cover; 
+	}
+	section .connect
+	{
+		font-weight: bolder;
+		word-spacing: 0.2em;
+		float: left;
+
+	}
+	section .create
+	{
+		float: right;
+		width: 50%;
+	}
+	.create h1
+	{
+		font-size: 30px;
+	}
+
+	.create input
+	{
+		height: 20px;
+		border-radius: 5px;
+		border:transparent;
+	}
+	.create button
+	{
+		padding: 8px 40px;
+		background-color: #5D9149;
+		color: #fff;
+		border:none;
+		border-radius: 7px;
+	}
+	label
+	{
+		display: block;
+		padding: 0.7rem 0;
+		font-weight: bolder;
+		color: gray;		
+	}
+	img
+	{
+		background:transparent;
+	}
+	.ferror{
+		display: none;
+		color: red;
+	}
+	
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<h1>Facebook</h1>
+		<div class="right">	
+		<table>
+			<tr>
+				<td>Email or Phone Num</td>
+				<td>Password</td>
+			</tr>
+			<tr>
+				<td><input type="Email" name="em"></td>
+				<td><input type="Password" name="pws"></td>
+				<td><a href="#" style="<color: white"><button>login</button></a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="login" value="login">keep me logged in</td>
+				<td><a href="#">Forgotten Password ?</td>
+			</tr>
+		</table>
+	</div>
+</div>
+	</header>
+
+	<section>
+		<div class="container">
+			<div class="connect">
+				<p>Facebook helps you connect and share with the <br>people in your life.</p>
+				<!-- //<img src="fb1.png" alt="fb"> -->
+			</div>
+			<div class="create">
+				<h1>Create an account</h1>
+				<h4>It's free and always will be</h4>
+				<form onsubmit="return validation()">
+				<tr>
+					<section id="container">
+					
+					<td><input type="text" placeholder="firstname" name="firstname" id="firstname" class="form-control" autocomplete="off"></td>
+				   <p class="ferror" id="ferror">enter first name</p>
+			   
+					<td><input type="text" name="lastname" placeholder="lastname" id="lastname" class="form-control" autocomplete="off"></td>
+					<td><label>Your Email</label></td>
+					<td><input type="email" name="email" id="email"class="form-control" autocomplete="on"></td>
+					<td><label>Re-enter Email</label></td>
+					<td><input type="Email" name="remail" id="remail"class="form-control" autocomplete="off"></td>
+					<td><label>New Password</label></td>
+					<td><input type="Password"name="password" id="Password"class="form-control" autocomplete="off"></td>
+					<label for="Gender">Gender</label>
+					<input type="radio" name="male" value="Male" id="male"class="form-control" autocomplete="off">Male
+					<input type="radio" name="female" value="Female" id="female"class="form-control" autocomplete="off">Female
+					<label>DOB</label>
+					<input type="date" name="date" id="date"class="form-control" autocomplete="off">
+				<p>By clicking Create an account, you agree to our <a href="#"> Terms, Data Policy </a> and <a href="#">Cookie Policy</a> you may receive SMS notification us and opt out any time.</p>
+			   <button type="submit" id="login" style="background-color: blue;">submit</button>
+			</section>
+				<p><a href="#">Create a Page</a> For a Celebrity, band or business.</p>
+			</tr>
+		</form>
+			</div>
+		</div>
+	</section>
+	<script>
+		document.getElementById("firstname").addEventListener('blur',function(event){
+			let firstname;
+			firstname=document.getElementById("firstname").value;
+			if(firstname==""){
+				document.getElementById("firstname").style.border="3px solid red";
+				document.getElementById("ferror").style.display="block";
+			}
+		})
+	</script>
+</body>
+</html>

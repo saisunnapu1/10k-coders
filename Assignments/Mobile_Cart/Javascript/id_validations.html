@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" name="aadhhar" id="aadhharno" onfocusout="validateAadhaar()">
+        <script> function validateAadhaar(){ 
+            var regexp = /^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$/; 
+            var ano = document.getElementById("aadhharno").value; 
+            
+            if(regexp.test(ano)) { 
+            document.write("Valid Aadhaar Number"); 
+            return true; 
+            }else{ 
+                document.write("inValid Aadhaar Number");
+             return false; 
+            } } 
+            </script>
+
+    </body>
+</html>

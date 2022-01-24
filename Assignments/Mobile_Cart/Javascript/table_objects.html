@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table{
+                border: 2px solid red;
+            }
+            th,td{
+                border: 1px solid black;
+            }
+            table{
+             margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="mytab">
+            <tr>
+                <th>NAME </th>
+                <th>MAIL</th>
+                <th>NUMBER</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td> 2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td> 2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1.2</td>
+                <td> 2</td>
+                <td>3</td>
+            </tr>
+            
+        </table>
+        <button onclick="fuc()">click on me</button>
+        
+        
+        <script>
+            let students=[
+                {
+                    name:'sai',
+                    mail:'sai@gmail.com',
+                    no:99
+
+                },
+                {
+                    name:'len',
+                    mail:'len@gmail.com',
+                    no:98
+
+                },
+                {
+                    name:'vai',
+                    mail:'vai@gmail.com',
+                    no:97
+
+                }
+            ]
+            let s1=Object.values(students[0]);//storing values of row 1
+            let s2=Object.values(students[1]);
+            let s3=Object.values(students[2]);
+          function fuc(){
+              var w=document.getElementById("mytab").rows[3].cells;
+              w[0].innerHTML=s3[0];
+              w[1].innerHTML=s3[1];
+              w[2].innerHTML=s3[2];
+              var y= document.getElementById("mytab").rows[1].cells;
+              y[0].innerHTML =s1[0];
+              y[1].innerHTML =s1[1];
+              y[2].innerHTML =s1[2];
+             var x= document.getElementById("mytab").rows[2].cells;
+              for(let k=0;k<=s2.length;k++){
+                  x[k].innerHTML=s2[k];
+              }
+                   
+          }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <section>
+            <h1 id="demo"></h1>
+            <h1 id="1"></h1>
+            <h1 id="2"></h1>
+            <h1 id="4"></h1>
+            <h2 id="fact"></h2>
+            <h1 id="xx" style="color: red;"></h1>
+            <h1 id="ven" style="color: gray;"></h1>
+        </section>
+        <script>
+            /* Functions 
+                        :set of statements that can be used to perform a specific task
+                why: 1.To resuse the code
+                     2.To decrease the lines of code
+            There are different ways to create functions.let us see one by one 
+
+            */
+            //1)function with no parameter
+            mul();
+            function mul(){
+                let a=3,b=4,c;
+                c=a+b;
+                console.log(c)
+            }
+            //2)function with parameter
+            console.log("-----multiplication table-------")
+            table(4);
+            function table(num){
+                for(let i=1;i<=10;i++){
+                    console.log(num*i);
+                }
+            }
+            console.log("--------------------------------")
+            //3)return function
+            let bigger=greater(20,10);
+            console.log(bigger)
+            function greater(a,b){
+                if(a>b){ return "a is greater then b"}
+                else return "b is greater then a"
+
+            }
+            document.getElementById("demo").innerHTML="converting celsius to fahrenheit using functions  "+toCel(77);
+            function toCel(fahrenheit){
+                return (5/9) * (fahrenheit-32);
+            }
+            //4}defaul parameter
+            document.getElementById("1").innerHTML=add(2,3);//para given
+            function add(a=1,b=1){//default parameters if para is not given
+                return a+b;
+            }
+            document.getElementById("2").innerHTML=add();//para not given
+            function add(a=2,b=1){//default parameter will works if we not given para during fuction calling
+                return a+b;
+            }
+            //5)anonymous function//fucntion has no name we call as anony func
+            var greet = function () {//anony with no arg
+            console.log("welcome to 10k coders")
+         };
+        greet();
+        var greet1 = function (platform) {//anony func with arg
+        console.log("Welcome to ", platform);
+        };
+  
+        greet1("10000 coder");
+        //6)recursive function
+        let a=5;
+        if(a>0){
+            let result=fact(a);
+            //console.log(result);
+            document.getElementById("fact").innerHTML="The factorial of given number using recursive function is"+result;
+        }
+        function fact(a){
+            if(a==0){return 1;}
+            else{
+                return a*fact(a-1);//calling the same function
+            }
+
+        }
+        //7)Nested functions
+        secondFunction();//function calling
+        function hypotenuse(a, b) {
+               function square(x) { return x*x; }
+               return Math.sqrt(square(a) + square(b));//fuction with in the function
+            }
+            function secondFunction() {
+               var result;
+               result = hypotenuse(1,2);//another function within the fuction
+               document.write ( '<h1>'+result+'</h1>' );
+            }
+            //8)self invoked function//A self-invoking expression is invoked (started) automatically, without being called.
+            (function () {
+            document.getElementById("xx").innerHTML = "Hello! I called myself self invoke";
+            })();
+            //9)callback function//JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
+            function myDisplayer(some) {
+             document.getElementById("ven").innerHTML = some;
+            }
+
+            function myFirst() {
+             myDisplayer("Hello");
+            }
+
+            function mySecond() {
+              myDisplayer("Goodbye");
+                }
+
+            myFirst();
+            mySecond();
+
+        </script>
+    </body>
+</html>

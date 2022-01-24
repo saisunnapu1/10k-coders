@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            /*class:class is a combination of data and members
+            why classes?
+                -To encapsulate the data and their behaviour
+            How 
+            */
+            class User{
+                // name;
+                // college;
+                // id;
+            constructor(name,college,id){//constructor is a special member fuunction
+                //constructor is not not called sperately
+                //it automatically executed when the instance is created
+                this._name=name;
+                this._college=college;
+                this._id=id;
+                }           
+                login(){
+                    return "login sucess";
+
+                }
+                forgotPassword(){
+
+                }
+            }
+            //instance of class
+            let x=new User("len","ph",33);//call by value
+            //constructor is not mandatory for a class
+            console.log(x._name);
+            console.log(x._college);
+            console.log(x._id);
+            console.log(x.login());//calling login method
+            class Student extends User{
+                constructor(){//constructor cannot be overriden
+                    super("murali","sai@gmail.com",99)
+
+                }
+                childMethod1(){
+                   return this.login();
+                }
+                login(){//normal methods can be overriden
+                    console.log("login of child class");
+                }
+            }
+            let o=new Student();
+            console.log(o.childMethod1());
+            console.log(o._name);
+            console.log(o._college);
+            console.log(o._id);
+
+        </script>
+    </body>
+</html>

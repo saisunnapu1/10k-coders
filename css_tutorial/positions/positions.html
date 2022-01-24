@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            height: 1200px;
+        }
+        .p1{
+            border: 2px solid black;
+            width: 30%;
+            height: 190px;
+            position: relative;
+            padding: 20px;
+        }
+        h3{
+            position: absolute;
+            top:7px;
+        border: 1px solid red;
+    left: 130px;
+top: 100px;        }
+h2{
+    position: absolute;
+    top: 20px;
+    left: 700px;
+    border: 2px solid red;
+    height: 100px;
+    padding-top: 100px;
+}
+h5{
+    position: fixed;
+    border: 2px solid pink;
+    padding: 20px;
+    background-color: palevioletred;
+    
+}
+h5+h2{
+    position: sticky;
+    top: 100px;
+}
+
+    
+    </style>
+</head>
+<body>
+<section class="p1">i am parent having position relative
+    <h3>i am absolute of relative parent</h3>
+    
+</section>
+<h2>i am absolute of viewport </h2>
+<h5>i am fixed all over the screen</h5>
+<h2>sticky is applied to me</h2>
+    
+</body>

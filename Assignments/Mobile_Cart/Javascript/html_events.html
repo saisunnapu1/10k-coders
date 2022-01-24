@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body onload="window.alert('Page successfully loaded');">
+        <button id="demo" onclick="date()">click on me</button><br><br> 
+        <button  onmouseover="fuc()">hover on me</button><br><br>
+        <h2>enter something here</h2>
+        <input type="text" id="input1" onfocus="focusevent()"/><br><br>
+        <input type="text" id="input1" onkeydown="keyevent()"/> 
+        <script>
+            //HTML events are "things" that happen to HTML elements.
+
+            //When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+            function date()
+            {document.getElementById("demo").innerHTML=Date();}//onclick 
+            function fuc()
+            {alert("mouse over me")}//onmouseover
+            function focusevent()  
+            {document.getElementById("input1").style.background=" yellow";}//onfocus
+            function keyevent()
+            {  document.getElementById("input1");  
+            alert("Pressed a key");  }//onkeydown
+
+        </script>
+    </body>
+</html>

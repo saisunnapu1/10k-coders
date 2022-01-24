@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                text-align: center;
+            }
+            h1{
+                color: blue;
+                font-size: 55px;
+            }
+            h2,p{
+                text-align: left;
+                margin-left: 10px;
+                margin-bottom: 0%;
+            }
+            .con{
+                width: 40%;
+                border: 1px solid black;
+                margin-left: auto;
+                margin-right: auto;
+                
+            }
+            form{
+                margin: 10px;
+            }
+            .pname{
+                margin-top: 20px;
+                position: relative;
+
+            }
+            .pname input{
+                width: 46%;
+            }
+            ::placeholder{
+                color:blue;
+                opacity: 0.5;
+            }
+            input{
+                width: 96%;
+                margin-bottom: 12px;
+                padding: 6px;
+                border-radius: 4px;
+                background-color: white;
+                
+            }
+            .dob{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .do select{
+                width: 70%;
+                margin-left: 30px;
+
+            }
+            .dob input{
+                width: 30%;
+                margin: 0%;
+
+            }
+            button{
+                margin: 20px;
+                width: 150px;
+                background-color: green;
+                color: white;
+                padding: 10px;
+            }
+            .l1{
+                width: 180px;
+                padding: 6px;
+            }
+           .perror{
+               display: flex;
+           }
+           .prror p{
+               flex: 1;
+               margin-top: 0%;
+               
+           }
+           .perror :last-child{
+               margin-left: 200px;
+           }
+           .do label{
+               float: left;
+           }
+           .do{
+               display: flex;
+              margin-left: 100px;
+           }
+           .error{
+               display: none;
+           }
+           .exc{
+               width: 20px;
+               height: 30px;
+               position: absolute;
+               top: 1px;
+               display: none;
+               left: 270px;
+               
+           }
+           .exc1{
+               width: 20px;
+               height: 30px;
+               position: absolute;
+               top: 1px;
+               display: none;
+               left: 560px;
+           }
+         .pos,.pos1{
+             position: relative;
+         }
+         #em{
+             width: 20px;
+             height: 30px;
+             position: absolute;
+             top: 1.3px;
+             left: 560px;
+             display: none;
+         }
+
+        #ep{
+            
+             width: 20px;
+             height: 30px;
+             position: absolute;
+             top: 1.3px;
+             left: 560px;
+             display: none;
+
+        }
+        </style>
+
+    </head>
+    <body id="log">
+        <h1>facebook</h1>
+        <section class="con">
+            <div> 
+            <h2>Sign Up</h2>
+            <p>Its quick and easy</p>
+        </div>
+            <hr>
+
+            <form >
+                <section class="pname">
+                    <input type="text" placeholder="First name" id="fname">
+                    <input type="text" placeholder="Second name" id="sname"> 
+                    <img class="exc" id="ef" src="https://img.icons8.com/emoji/2x/exclamation-mark-emoji.png">  
+                    <img class="exc1" id="es" src="https://img.icons8.com/emoji/2x/exclamation-mark-emoji.png">        
+                </section>
+                <section class="perror">
+                    <p class="hide error">enter first name</p>
+                    <p class="error hide">enter second name</p>
+                </section>
+                <section class="pos"> 
+                <input type="text" placeholder="Mobile number or emial address" id="mail">
+                <img class="exc2" id="em" src="https://img.icons8.com/emoji/2x/exclamation-mark-emoji.png">  
+                <p class="error hide">entr valid email</p>
+            </section  >
+            <section class="pos1"> 
+                <input type="text" placeholder="New Password" id="pass">
+                <img class="exc3" id="ep"  src="https://img.icons8.com/emoji/2x/exclamation-mark-emoji.png">  
+                <p class="error hide">entr valid email</p>
+            </section>
+                <p>Date of birth:</p>
+                <section class="dob">
+                    <select name="cars" id="cars" class="l1">
+                        <option value="volvo">1</option>
+                        <option value="saab">2</option>
+                        <option value="opel">3</option>
+                        <option value="audi">4</option>
+                      </select>
+                      <select name="cars" id="cars" class="l1">
+                        <option value="volvo">jan</option>
+                        <option value="saab">feb</option>
+                        <option value="opel">mar</option>
+                        <option value="audi">apr</option>
+                      </select>
+                      <select name="cars" id="cars" class="l1">
+                        <option value="volvo">2000</option>
+                        <option value="saab">1999</option>
+                        <option value="opel">1998</option>
+                        <option value="audi">1997</option>
+                      </select>
+                </section>
+                <p>Gender:</p>
+                <section class="do">
+                        <label>male</label>
+                        <input type="radio" value="male">
+                        <label>female</label>
+                        <input type="radio" value="male">
+                        <label>custom</label>
+                        <input type="radio" value="male">
+                        
+                      </select>
+                      <!-- <section class="do">
+                          <section> 
+                              <label>male</label>
+                              <input type="radio" value="male">
+                          </section>
+                          <section> 
+                            <label>male</label>
+                            <input type="radio" value="male">
+                        </section>
+                        <section> 
+                            <label>male</label>
+                            <input type="radio" value="male">
+                        </section>
+                      </section> -->
+
+                </section>
+                <p><span style="color: gray;">  clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</span></p>
+                <button type="button" id="login_bnt">Sign up</button>
+            </form>
+            <script>
+                  document.getElementById("fname").addEventListener('blur',function(event){
+                      validate(this);
+                      console.log(this);
+                      let firstname;
+                      firstname=document.getElementById("fname").value;
+                      if(firstname==''){
+                          console.log("hai i m null");
+                          document.getElementById("ef").style.display="block";
+                      }
+                        
+                })
+                document.getElementById("sname").addEventListener('blur',function(event){
+                      validate(this);
+                      console.log(this);
+                      let firstname;
+                      firstname=document.getElementById("sname").value;
+                      if(firstname==''){
+                          console.log("hai i m null");
+                          document.getElementById("es").style.display="block";
+                          document.getElementById("fname").style.background = "white";
+                      }
+                        
+                })
+                document.getElementById("mail").addEventListener('blur',function(event){
+                      validate(this);
+                      console.log(this);
+                      let firstname;
+                      firstname=document.getElementById("mail").value;
+                      if(firstname==''){
+                          console.log("hai i m null");
+                          document.getElementById("em").style.display="block";
+                      }
+                        
+                })
+                document.getElementById("pass").addEventListener('blur',function(event){
+                      validate(this);
+                      console.log(this);
+                      let firstname;
+                      firstname=document.getElementById("pass").value;
+                      if(firstname==''){
+                          console.log("hai i m null");
+                          document.getElementById("ep").style.display="block";
+                      }
+                        
+                })
+                document.getElementById("login_bnt").addEventListener('click',function(e){
+                
+                    log.submit();
+                })
+                
+
+                          
+                      function validate(ele){
+                          if(ele.value==''){
+                              ele.style.border = '2px solid red';
+                          }
+                      }
+                     
+                      
+                      
+
+
+               
+            </script>
+        </section>
+     
+        
+    </body>
+</html>

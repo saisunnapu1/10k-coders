@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+         /*   polymorphism:An ability to make use of one method into multiple 
+            forms is known as polymorphism
+            why:
+                -code reusebility
+                -code quality
+            Types:
+                -operator overloading 
+                -method overloading
+
+                */
+              // operator overloading:
+                let a,b,c;
+                a=10;b=20
+                c=a+b;//here + acts as arthmetic operator
+                let d,e,f;
+                d="hai",e="sai"
+                f=d+e;//here + acts as a concat operator
+                console.log(c,f); //note:here + used for many forms
+               
+                //method overloading:single method multiple forms called as method overloading
+                //code reusebility increases ex:offers in ecart
+                let stationary={
+                    name:'wings of fire',
+                    author:'Abj sir',
+                    finalPrice:function(sp,gp=50){
+                        return  sp+(sp*gp/100);
+                    }
+                }
+                console.log(stationary.finalPrice(500,18));//2 parameter
+                console.log(stationary.finalPrice(500));//1 parameter
+                console.log(stationary.finalPrice(500,10));
+        </script>
+    </body>
+</html>

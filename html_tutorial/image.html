@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rosybrown;
+            }
+            h1{
+                text-align: center;
+                background-color: red;
+            }
+            .parent{
+                display: flex;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .parent .c1,.parent .c3{
+                flex: 1;
+                text-align: center;
+                border: 3px solid black;
+                background-color: white;
+            }
+            .c2{
+                flex: 2;
+                border: 3px solid red;
+            }
+          h2{
+              color: black;
+              padding-left: 20px;
+          }
+        </style>
+
+    </head>
+    <body>
+        <!-- <button onclick="document.getElementById('image').src='./images/1.png'" 
+        onclick="document.getElementById('image1').src='./images/1.png'"
+        >click me to see mobiles</button>
+        <section>
+            <img id="image">
+            <img id="image1">
+            
+        </section> -->
+        <h1>Welcometo the images of mobiles</h1>
+        <section class="parent"> 
+            <section class="c1">
+                <img id="myimage">
+            </section>
+            <section class="c2" id="c2">
+                <h2 id="h1"></h2>
+                
+            </section>
+            <section class="c3">
+                
+                <img id="myimage1">
+            </section>
+        </section>
+        <section id="parent2">
+
+        </section>
+
+       
+        <!-- <section>      
+        <img id="myimage">
+    </section>
+    -->
+       
+        <script>
+            // function Student(name,roll,no){
+            //     this.name=name;
+            //     this.roll=roll;
+            //     this.no=no;
+            //     this.details=function(){
+            //         return this.name+" and his number is"+this.no;                }
+            // }
+            // let x=new Student('sai',22,'+919');
+            // document.write(x.details());
+            // let object={
+            //     name:"sai",
+
+                
+            // }
+            let details={
+                name:"sai",
+                text:"'<h1>kiran</h1>",
+                college:"<h2>SAMSUNG Galaxy Z Fold3 5G (Phantom Black, 512 GB)  (12 GB RAM)</h2><li>offer</li><li>offer</li>",
+
+                
+
+                feature:function(){
+                    college:"andhra university"
+                    return this.college;
+                    
+                    // return document.getElementById("h1").innerHTML=details.name;
+                   
+
+                },
+                fea:function(){
+                    return details.text;
+                   
+                }
+            }
+            console.log(details.feature());
+            document.getElementById("c2").innerHTML=details.feature();
+
+
+
+
+
+
+
+
+
+
+             document.getElementById("myimage").src='./images/1.png';
+             document.getElementById("myimage1").src='./images/1.png';
+        
+        </script>
+    </body>
+    </html>

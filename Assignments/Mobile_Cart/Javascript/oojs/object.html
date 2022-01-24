@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            /*Objects:objects can be used to store multiple values of a single entity using 'key:value' pairs
+            objects are denoted by flower braces
+                Object creating ways
+                  1.object literal
+                  2.object constructor
+                */
+    //object literal//single level instance
+             let employee={    
+                name:'sai',   //key:value
+                no:+9098,
+                email:'sai@gmail.com',
+                status:'active'
+            }
+            //manually retriving the data\
+            console.log("----------manally retrieving the data--------- ")
+            console.log(employee.name);
+            console.log(employee.no);
+            console.log(employee.email);
+            console.log(employee.status);
+            //retriving data using loops
+            console.log("------retrieving data using loops---------")
+            for(let k in employee){
+                console.log(k+"--"+employee[k]);//k is the keys and employee[k] is values
+                //console.log(employee[k]);
+
+            }
+            //To count values in object we cannot directly use the length 
+            //instead we use ---console.log(Object.keys(employee));
+            console.log(Object.keys(employee));//type is array format we can directly use length function to length of objects
+            console.log(Object.values(employee));//total values in array format
+    //object constructor
+           let product=new Object();
+           product.name='mac';
+           product.model='m1'
+           product.price='32k'
+           console.log(product.name,product.model,product.price);//manual 
+           for(let k in product){
+               console.log(product[k]);
+           }         
+        </script>
+    </body>
+</html>
+</html>

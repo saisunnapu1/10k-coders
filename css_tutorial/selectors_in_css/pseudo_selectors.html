@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    *{
+        text-align: center;
+        background-color: black;
+    }
+    .king{
+        color: blanchedalmond;
+    }
+
+    /* pseudo-class selector: */
+p:first-child {
+  color: blue;
+} 
+a.light:hover{
+    color: brown;
+    font-size: 30px;
+}
+/* pseud0-element selector */
+p::first-letter{
+    color: darkorange;
+}
+::selection{
+    color:red;
+background-color: yellowgreen;}
+
+</style>
+</head>
+<body>
+
+<p>I am first child of body</p>
+<p class="king">This is some text.</p>
+
+<div>
+  <p>I am first child of div.</p>
+  <p class="king">This is some text.</p>
+</div>
+<section>
+<p>I am first child of section</p>
+<p class="king">one of the child</p>
+</section>
+<div>
+    <a class="light" href="#" target="_blank">HOVER ON ME</a>
+</div>
+</body>
+</html>
+
+

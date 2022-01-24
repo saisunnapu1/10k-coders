@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .parent{
+                display: flex;
+            }
+            .parent div{
+                flex: 1;
+                border: 1px solid red;
+                padding: 10px;
+                margin: 2px;
+                text-align: center;
+                background-color: rosybrown;
+            }
+        </style>
+
+    </head>
+    <body>
+        <section class="parent">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JS</div>
+            <div id="boot">BOOTSRAP</div>
+        </section>
+        
+        <script>
+        /*SELECTORS IN JavaScript
+         */
+        console.log(document.getElementById("boot"));
+        console.log(document.getElementsByClassName("parent"));
+        console.log(document.querySelector('section div'));
+        console.log(document.querySelector('section div:last-child'));//selects only one selector
+        console.log(document.querySelectorAll('section div'));//selects all the selector
+
+
+        </script>
+    </body>
+</html>

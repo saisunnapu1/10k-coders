@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .head{
+                display: flex;
+            }
+            .hr1 {
+                flex: 25%;
+            }
+            .hr2{
+                flex: 75%;
+            }
+            nav li{
+                flex: 1;
+                text-align: center;
+                list-style: none;
+                padding-top: 1.5%;          
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: larger;
+            }
+             .head{
+                background-image: url('../../Assignments/Mobile_Cart/image/back_head.png');
+            }
+           nav ol{
+                display: flex;
+                width: 72%;
+                padding-left: 18%;
+            }    
+            @media screen and (min-width:300px) and (max-width:700px) {
+                .head{
+                    display: flex;
+                }
+                .head-row1 {
+                    flex: 1;
+                    flex-wrap: wrap;
+                }
+            }      
+        </style>
+
+    </head>
+    <body>
+    
+       <header class="head"> 
+             <section class="hr1"><img src="image\logo.png"></section>
+             <nav class="hr2">
+                 <ol>
+                     <li><a href="home.html">Home</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Brand</a></li>
+                     <li><a href="#">Specials</a></li>
+                     <li><img src="image/search_icon.png"></li>
+                </ol>
+             </nav>
+             
+    </header>
+    
+    
+     
+    </body>
+</html>

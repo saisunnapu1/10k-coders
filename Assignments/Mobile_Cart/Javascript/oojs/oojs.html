@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>body {font-family: Arial, Helvetica, sans-serif;}
+            form {border: 3px solid #f1f1f1;
+            width: 50%;
+            margin: auto;}
+            h2{
+                text-align: center;
+            }
+            
+            input[type=text], input[type=password] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              box-sizing: border-box;
+            }
+            
+            button {
+              background-color: #04AA6D;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 0;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+            }
+            
+            button:hover {
+              opacity: 0.8;
+            }
+            
+            .cancelbtn {
+              width: auto;
+              padding: 10px 18px;
+              background-color: #f44336;
+            }
+            
+            .imgcontainer {
+              text-align: center;
+              margin: 24px 0 12px 0;
+            }
+            
+            img.avatar {
+              width: 20%;
+              border-radius: 50%;
+            }
+            
+            .container {
+              padding: 16px;
+            }
+            
+            span.psw {
+              float: right;
+              padding-top: 16px;
+            }
+            .hide{
+              display: none;
+            }
+            .error{
+              color:  red;
+            }
+            
+            h1{
+                color:white;
+                background-color: black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h2>Login Form</h2>
+
+            <form action="#" method="post" novalidate name="loginUser">
+            <div class="imgcontainer">
+                <img  src="../../image/logo.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname" ><b>Username</b></label>
+                <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+                <span class="hide error" id="uerror">Enter username</span><br>
+                
+
+                <label for="psw" ><b>Password</b></label>
+                <input type="password"id="psw" placeholder="Enter Password" name="psw" required>
+                <span class="hide error" id="perror">Enter Password</span>
+                    
+                <button type="submit" id="login_bnt" onclick="">Login</button> 
+                <!-- on click is the html in line javascript-->
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn" id="can">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            </form>
+        <script>
+           /* Encapsulation:wrapping of data and methods/members in a single unit
+            Advantages:
+            1.we can easily organize the code
+            2.easy to read
+            3.beter performance
+            4.create modular structure to our application
+            5.teduce the complexity
+
+
+            How many ways that we can encapsulate
+                1.object constructor 
+                2.object literal
+                3.predefined object*/
+
+                //Object constructor
+                function User(){
+                    //properties:key value pairs
+                    this.username="sai";
+                    this.email="sai@gmail.com";
+                    this.qualifiaction="btech";
+                    this.experience="4 years";
+                    //methods:adds behavior to the properties(it contains function)
+                    this.details=function(){
+                        console.log("details");
+                        return this.username+' has '+this.experience+' he has '
+                        +this.qualifiaction+' degree and his email is '+this.email;
+                    };
+
+                    this.login=function(event){
+                        console.log("hello");
+                        
+                        event.preventDefault();//prevented submission 
+                        
+                        let username,password;
+                        username=document.getElementById("uname").value;
+                        password=document.getElementById("psw").value;
+                        console.log(username);
+                        if(username=='' && password==''){
+                          console.log("if prt");
+                            document.getElementById("uname").style.border='2px solid red';
+                            document.getElementById("psw").style.border='2px solid red';
+                            document.getElementById("uerror").style.display="block";
+                            document.getElementById("perror").style.display="block";
+                            
+                        }
+                        else if(password==''){
+                          console.log("else part");
+                            document.getElementById("psw").style.border='2px solid red';
+                            document.getElementById("uname").style.border='2px solid #ccc';
+                            document.getElementById("perror").style.display="block";
+                            document.getElementById("uerror").style.display="none";
+                        }else{
+                        loginUser.submit();//submit is predefined method used here to allowed submission
+
+
+                        }
+
+                    }
+                    this.registerUser=function(){
+                      console.log("registration field");
+                      this.fname="anupama";
+                      this.sname="parameswar";
+                      result=this.details();
+                      console.log(result);                    
+                      this.features=function(){
+                        console.log("features");
+
+                       return this.fname+" "+this.sname;
+
+                      }
+                      console.log(this.features());
+                    }
+                    
+                    this.forgotPassword=function(){
+                     
+
+                    }
+                }
+                //instance creation of user constructor
+                let x=new User();
+                let y=new User();
+                document.write('<h1>'+x.details()+'</h1>');
+                document.write('<h2>'+x.details()+'</h2>');
+                document.write('<h3>'+x.details()+'</h3>');
+                document.getElementById('can').addEventListener('click',x.details);
+
+                //attaching the click event to loginbtn
+                document.getElementById('login_bnt').addEventListener('click',x.login);
+                y.registerUser();
+                //y.features();
+
+                /*Inheritence:acquiring the properties of parent
+                      Why:code reusebility
+                       Types:
+                        1.single level
+                        2.multi level
+                        3.multi level
+
+
+                */
+
+             
+
+
+
+
+                //object literal
+                let Product={
+                    name:'mac',
+                    model:'flat',
+                    price:'23k',
+                    details:function(){
+
+
+                        return this.name+', model is'+this.model+
+                        ' and the price of this product is '+this.price;
+                    },
+                    addProduct: function(){
+
+                    },
+                    deleteProduct: function(){
+
+                    },
+                    addaProductToCart: function(){
+
+                    },
+                    deleteProductFromCart: function(){
+
+                    }
+                }
+                document.write('<h1>'+Product.details()+'</h1>');
+                    
+                
+        </script>
+    </body>
+</html>

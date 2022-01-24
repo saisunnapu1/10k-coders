@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+            /* Attribute value euals to */
+            [class="begins"]{
+                background-color: violet;
+            }
+            /* Attribute value starts with */
+            [class ^="ste"]{
+                color:orange ; 
+                       }
+             /* Attribute value ends with */
+            [class $="ins"]{
+                color:red;
+            }
+            /* Attribute value contains */
+            [class *="eps"]{
+                background-color: seagreen;
+            }
+            /* Has attribute */
+            [target]{
+                background-color: olive;
+                font-size: x-large;
+            }
+
+            
+</style>
+
+
+    </head>
+    <body>
+        <div>
+            <h1 class="starts">I am h1 heading of parent div</h1>
+            <h1 class="begins">I am h1 heading of parent div</h1>
+            <h1 class="steps">I am h1 heading of parent div</h1>
+        </div>
+        <div>
+            <a href="#" target="_blank">i am link element(has attribute applied to me)</a>
+        </div>
+    </body>
+</html>

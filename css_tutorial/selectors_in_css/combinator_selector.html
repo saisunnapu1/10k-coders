@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          body{
+            padding: 40px;
+          }
+          /* descendant selector:
+          selects all descendents of specified element*/
+          section p{
+            color:red;
+            font-size: larger;
+            text-align: center;
+          }
+          /* child selector:only selects direct child */
+        div>h3{
+            color: green;
+            text-align: center;
+          }
+          /* adjacent sibling selector:selects an element that is directly after specific element */
+          div+img{
+            opacity: 80%;
+            padding-left: 500px;
+          
+          }
+          /* general sibling:selects all elements that are next sibling of a sibling element*/
+        img~ul{
+          background-color: sandybrown;
+          text-align: center;
+          list-style: none;
+        }
+        
+
+        </style>
+
+    </head>
+    <body>
+      <section>
+        <p>hai i m paragraph(descendent applied)</p>
+        <div><span><p>i am child of span(descendent applied coz of subchild relation)</p></span></div>
+      </section>
+      <div><h3>i am paragraph out of section</h3>
+      <span style="text-align: center;"><h3>i am child of span and sub child ofdiv</h3></span>
+      </div>
+      <div>
+        <h2></h2>
+      </div>
+      <img src="https://media.istockphoto.com/photos/stylesheet-on-a-screen-programming-concept-picture-id1250984508?b=1&k=20&m=1250984508&s=170667a&w=0&h=hrGy1VAjWsq88H8wppmHruwV3kxkN9c39booFQGsR3Q=" alt="css">
+     <ul>
+       <li>CSS</li>
+       <li>HTML</li>
+     </ul>
+     <ul>
+      <li>PYTHON</li>
+      <li>JAVA</li>
+    </ul>
+     
+        
+    </body>
+</html>

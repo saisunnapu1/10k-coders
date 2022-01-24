@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            /* Array of objects
+            objects are sent via in the format of array
+            */
+            let cars=[
+                {
+                    name:'bmw',
+                    model:'a1'
+                },
+                {
+                    name:'bmw',
+                    model:'a2'
+                },
+                {
+                    name:'bmw',
+                    model:'a3'
+                }
+            ]
+            console.log(cars.length)//length of array contaning multiple objects
+            console.log(typeof(cars));//object
+            console.log(typeof(cars[0]));//object
+
+            //ACCESSING VALUES
+            console.log(cars[0]);//accessing key value pairs in the array
+            console.log(cars[0].name);//accessing name of 1st object in the array(cars)
+            console.log(Object.keys(cars[0]));
+            console.log(Object.values(cars[0]));
+            //accessing all key value pairs in the given array of object
+            for(let k=0;k<cars.length;k++){
+                console.log(cars[k]);
+            }
+            document.write("<h1></h1>");
+        
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var name="Saikumar"
+var len=name.length
+console.log(len)
+console.log(name.slice(-8))//slice--(start,end)
+//slice also allows negative index
+console.log(name.substring(0,4))//substring doesnot allow neagtive values
+//substring--(start,end)
+console.log(name.substr(1,4))
+//substr--(start,length)
+var name1="saikumarkumar"
+var x=name1.replace("kumar","kiran")
+console.log(x)//replace part in the string with the given word first occurance only
+var y=name1.replace(/SAI/i,"w3")//insensitive 
+console.log(y)
+var gmatch="saikumarkumar"
+var k=gmatch.replace(/kumar/g,"kiran")//replaces all matched content in string
+console.log(k)
+console.log(gmatch.toUpperCase())//converts to upper case
+console.log(gmatch.toLowerCase())//converts to lower case
+text1="sai"
+text2="class"
+console.log(text1.concat(" ",text2))
+var rr="heello i m sia"
+console.log(rr.indexOf("i"))
+console.log(rr.search("i"))
+console.log("split method example");
+
+//split method
+let st="i am sai and my age is 22"
+console.log(typeof(st.split(" ")));
+let st1=st.split(" ");
+console.log(st1,typeof(st1),st1.length);
+//['i', 'am', 'sai', 'and', 'my', 'age', 'is', '22'] 'object' 8
+console.log(st1+"+++++"+st1.length+"+++++"+typeof(st1));
+
+
+//join method
+//join method converts array to the string
+let ar1=['i', 'am', 'sai', 'and', 'my', 'age', 'is', '22'];
+let str=ar1.join();
+console.log(str,typeof(str));
+
+//indexof()//displays the index if we give word or char
+let ind="i am sai i am sai";
+console.log(ind.indexOf('sai'));//displays first occurence// result:5
+console.log(ind.lastIndexOf('sai'));//displays last occurence result:14
+
+/*indexof can take two arg 
+    first arg:word or char that we want to search for
+    second arg:it is index value that we give.it will start searching from here*/
+
+console.log(ind.indexOf('sai',6));//display last occurence 
+
+
+//search
+    //search will take only one arg and displays index.it will not take second arg
+console.log(ind.search('sai'));//displays first occurence//result:5
+
+
+</script>
+
+</body>
+</html>

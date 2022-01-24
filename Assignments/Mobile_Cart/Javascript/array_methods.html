@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //ARRAY METHODS//
+
+            let cities=["bengalore","chennai","hyderabad"]//single variable multiple data of same or diff data types
+            cities.pop();// pop removes last element from the array
+            cities.push("hyderabad")//push adds element at the last of array
+            cities.shift()//shift removes index 0  element of the array
+            cities.unshift("bengalore")//unshift add elements at index 0
+
+            cities.splice(0,0,"Newdelhi","Newdelhi")
+            cities.splice(0,1,"kochi")
+            console.log(cities)
+            /*
+            splice--We can add and delete elements at the same time at the required index
+            1.It takes two arguments
+                        first arugument is the index position(to add elements)
+                        second argument is how many elements to remove from given index in arg1           
+            */
+            let NewCities=cities.slice(3)
+            console.log("NewCities are the sub part of cities created separately",NewCities)
+            console.log(cities)
+            let NewCities1=cities.slice(2,cities.length-1)
+            console.log("NewCities are also sub part of cities",NewCities1)
+             
+            /*slice extracts some part of array nd that we store by creating new variable
+            slice can accept 1 arg: arg is the index.from that index it extracts whole array
+            slice can accept 2 arg:
+                            first arg:starting index to extract
+                            second arg:upto index to extract
+            note:slice doesn't disturb the orginal array,we use it separately by creating new array    
+            */
+            let countries=["india","USA","phillippines","china","UK"]
+            console.log(countries)
+             
+            //removing all elements in array using splice
+            countries.splice(0,countries.length)
+            //Array was empty coz slice applied to whole length
+            console.log(countries)  
+            let all=cities.concat(countries);
+            console.log(all);     
+        </script>
+    </body>
+</html>

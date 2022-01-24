@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                border: 2px solid red;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id="div1">1 
+            <div class="box" id="div2">2
+                <div class="box" id="div3">3
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            /* Events
+            HTML events are "things" that happen to HTML elements.
+
+            When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+            */
+           /* EVENT BUBBLING
+             In event bubbling, the event is first captured and handled by the innermost element
+              and then propagated to outer elements.*/
+
+              
+            //   document.getElementById("div1").addEventListener('click',function(event){
+            //     alert('i m div1');      
+            //   })
+            //   document.getElementById("div2").addEventListener('click',function(event){
+            //    event.stopPropagation();
+            //     alert('i m div2');      
+            //   })
+            //   document.getElementById("div3").addEventListener('click',function(event){
+            //    event.stopPropagation();
+            //     alert('i m div3');      
+            //   })
+
+
+              /* EVENT CAPTURING 
+              Event capturing is the event starts from top element to the target element. It is the opposite of Event bubbling,
+              which starts from target element to the top element. */
+
+
+              document.getElementById("div1").addEventListener('click',function(event){
+                event.stopPropagation();
+                alert('i m div1');      
+              },true);
+              document.getElementById("div2").addEventListener('click',function(event){
+                event.stopPropagation();
+                alert('i m div2');      
+              },true);
+              document.getElementById("div3").addEventListener('click',function(event){
+                alert('i m div3');      
+              },true);
+        </script>
+    </body>
+    
+</html>
+

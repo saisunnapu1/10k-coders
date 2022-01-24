@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .parent{
+                display: flex;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 70px;
+            }
+            .c1,.c2{
+                flex: 1;
+            }
+            #fleft,#fleft1{
+                display: flex;
+            }
+          
+            p{
+                margin: 0%;
+                color: gray;
+            }
+            input{
+                padding: 6px;
+                border-radius: 5px;
+            }
+            #fleft input{
+                flex: 1;
+                width: 90%;
+                /* margin-bottom: 17px; */
+            }
+            #fleft1 input{
+                flex: 1;
+                width: 90%;
+                margin-top: 24px;
+            }
+            .same{
+                width: 95%;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+            form{
+                margin-left: 250px;
+            }
+            .blue{
+                color: blue;
+                opacity: 0.7;
+            }
+            .signin{
+                margin-top: 60px;
+                flex: 1;
+            }
+            .sign{
+                display: flex;
+            }
+            button{
+                padding: 14px;
+                border-radius: 6px;
+                color: white;
+                width: 100px;
+                background-color: blue;
+            }
+            .in{
+                text-align: center;
+            }
+            .next{
+                color: white;
+            }
+            a{
+                text-decoration: none;
+            }
+            section .one{
+                margin-left: 10px;
+                opacity: 0.5;
+            }
+            .sp{
+                color: red;
+            }
+            .sp{
+                display: none;
+            }
+            .flex{
+                display: flex;
+            }
+            .flex span{
+                flex: 1;
+            }
+            .one{
+                box-sizing: border-box;
+            }
+           
+          
+           
+
+        </style>
+    </head>
+    <body>
+      
+        <section class="parent">  
+      <section class="c1">
+          
+         <form>
+          <img src="..\Assignments\Mobile_cart\image\google_logo.png" width="100px" >
+          <h2>Create Your Google Accounts</h2>
+          <section id="fleft">
+              <div><input type="text" placeholder="First name" id="fname" ></div>
+              
+              <div><input type="text" placeholder="Second name" id="sname" ></div>
+          </section >
+          <section class="flex"> 
+          <span><p class="sp" id="sp1">Enter first name</p></span>
+          <span><p class="sp" id="sp2">Enter second name</p></span>
+        </section>
+          <input type="text" placeholder="Enter Email" class="same" id="mail">
+          <span><p class="sp" id="sp5">Enter Email</p></span>
+          <span><p>You can enter letters,numbers and periods</p></span>
+          <h3><span class="blue">Use my current email address instead</span></h3>
+         
+          <section id="fleft1">
+            <div><input type="text" placeholder="Password" id="psw"></div>
+            <div><input type="text" placeholder="Confirm" id="cpsw"></div>
+        </section>
+        <section class="flex"> 
+            <span><p class="sp" id="sp3">Enter password</p></span>
+            <span><p class="sp" id="sp4">Confirm password</p></span>
+          </section>
+        <span><p>Use 8 or more characters with a mix of letters, numbers & symbols</p></span><br>
+        <input type="checkbox" class="checkbox"> Show Password
+        <section class="sign">
+        <h3 class="signin"><a>Sign in instead</a></h3>
+        <h3 class="signin in"><button type="submit"><a class="next" href="#">Next</a></button></h3>
+        
+
+    </section>        
+          </form>
+
+      </section>
+      <section class="c2">
+          <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="350px"  >
+          <h3 class="one"> One account. All of Google working for you.</h3>
+
+      </section>
+    </section>
+    <script>
+        document.getElementById("fname").addEventListener('blur',function(event){
+            validateInpt(this);
+            console.log("first name")
+             document.getElementById("sp1").style.display="block";
+             document.getElementById("sname").style.border="2px solid #ccc";
+             document.getElementById("sp2").style.display="none";
+      });
+      
+      document.getElementById("sname").addEventListener('blur',function(event){
+        validateInpt(this);
+        document.getElementById("sp2").style.display="block";
+      });
+  
+      document.getElementById("mail").addEventListener('blur',function(event){
+        validateInpt(this);
+        document.getElementById("sp5").style.display="block";
+      });
+      document.getElementById("cpsw").addEventListener('blur',function(event){
+        validateInpt(this);
+        document.getElementById("sp4").style.display="block";
+      });
+      document.getElementById("psw").addEventListener('blur',function(event){
+        validateInpt(this);
+        document.getElementById("sp3").style.display="block";
+      });
+
+      function  validateInpt(ele){
+          if(ele.value==''){
+              ele.style.border = '2px solid red';
+          }
+      }
+     
+      </script>
+    </body>
+
+   
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                color: blue;
+                text-shadow: 1px 1px red;
+            
+            }
+        </style>
+    </head>
+    <h1 id="1"></h1>
+    <h1 id="2"></h1>\
+    <h1 id="3"></h1>
+    <h1 id="4"></h1>
+    <body>
+        <script>
+            function User(name,mail){//multi level design pattern//multiple instance we use object constructor
+                this.name=name;
+                this.mail=mail;
+                this.details=function(){//method
+                    console.log("details");                    
+                    this.dot=function(){//child parent
+                        return this.mail;
+                    }
+                    console.log(this.dot());//accessing the chil method from parent
+                    return this.name+" and his mail id is "+this.mail;//accessing the properties of by method
+                }
+                return this.name+" and his mail id is "+this.mail;
+            }
+            let x=new User("sai","sai@gmail.com");//instance was created.all the reference in the function definition will be there here
+            document.getElementById("1").innerHTML=x.details();//accessing method of object(User).
+            document.getElementById("2").innerHTML=x.name;//accessing the property of object(User).
+
+            /*prototype inheritance:
+                    adding the new properties and methods to the existing Object
+            why prototype inheritance:
+
+                                    generally in normal object constructor we include all unneccessary methods even we are not using those
+                                    this results in low performance and slow execution Proces.this can be avoided by using the prototype approach
+                                    light weight
+                                    **In definition we use only main methods and properties
+                                    remaining were added by using the prototype approach so  object will be light weight
+                                    */
+            User.prototype.address="rajahmundry";//prototype approch 
+            User.prototype.changeMail=function(){
+                return "U came into method of change mail"
+            }
+            document.getElementById("3").innerHTML=x.address;//accessing the prototype property
+            document.getElementById("4").innerHTML=x.changeMail();//accessing the prototype method
+        </script>
+    </body>
+</html>

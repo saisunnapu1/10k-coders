@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+        
+        header,ul{
+            display: flex;
+        }
+        header img{
+            padding-right: 100px;
+        }
+        nav{
+            flex: 4;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+         li{
+            
+        list-style: none;
+        flex: 1;
+        }
+     nav{
+         background-color: red;
+
+     }
+     nav ul{
+         display: flex;
+         padding-top: 10px;
+         
+      }
+      header{
+          position: sticky;
+          top: 0px;
+          z-index: 1;
+      }
+     /* -----------------------------------------------------------  */
+     section img{
+         height:600px;
+         width: 100%;
+         
+     }
+     .image_cont{
+         position: relative;
+     }
+     .caption{
+         position: absolute;
+         top: 150px;
+        left: 250px;
+        color: white;
+        font-size: 50px;
+     }
+     .about{
+         display: flex;
+         box-sizing:content-box;
+         border-bottom: 4px solid red;
+     }
+     .sub_about{
+         flex: 1;
+         padding-top: 40px;
+
+     }
+     .sub_about1{
+         flex: 1;
+         float: right;
+     }
+     .about img{
+         height: 700px;
+         padding: 70px;
+     }
+    
+      p span{
+         color: black;
+         font-weight: bolder;
+         font-size: xx-large;
+         padding-top: 20%;
+     }
+      .sub_about1{
+         padding-top: 20%;
+     }
+   .logo{
+       display: flex;
+   }
+   .logo img{
+       width: 50px;
+       height: 50px;
+       border: 2px solid black;
+       background-color: white;
+       margin: 2px;
+
+   }
+
+
+/* --------------------------------------------------- */
+footer{
+    background-color: black;
+    padding: 20px;
+}
+ footer h1{
+    color: white;
+    text-align: center;
+    
+}
+footer p{
+    color: white;
+    text-align: center;
+
+}
+footer ol{
+    display: flex;
+    width: 50%;
+    margin-left: 22%;
+}
+footer li{
+    flex: 1;
+    text-align: center;
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color:orange;
+}
+hr{
+    width: 50%;
+}
+
+/* ------------------------------------------------- */ 
+main{
+    padding: 30px;
+    background-color: gray;
+    border: 8px solid orange;
+}
+.sec{
+                display: flex;
+                margin: 20px;
+                padding: 40px;
+                background-color:t;
+                justify-content: space-around;
+                justify-content: center;
+                flex-wrap: wrap;
+    
+}
+.sec figure{
+                width: 22%;
+                height: 240p;
+                text-align: center;
+                /* border: 3px solid red; */
+                background-color: white;
+                border: 2px solid black;
+                padding: 20px;
+}
+.phn{
+    width: 100px;
+    height: 200px;
+}
+span{
+    color: red;
+}
+.size{
+    width: 20px;
+    height: 20px;
+}
+.star{
+    display: flex;
+    justify-content: center;
+}
+.sec figure:hover{
+    transform: scale(1.2);
+}
+/* =--------------------------------- */
+.contact{
+        background-color: grey;
+        text-align: center;
+        padding: 20px;
+        opacity: 0.8;
+    }
+    input{
+        border: 3px solid red;
+    }
+    form{
+        width: 50%;
+        background-color: white;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        padding: 10%;
+        padding-top: 4%;
+    }
+    input,textarea{
+        margin: 4px;
+    }
+    .half{
+        width: 45%;
+        padding: 5px;
+        
+    }
+    .full{
+        width: 93%;
+        padding: 5px;
+    }
+    textarea{
+        padding:30px;
+        width: 86.5%;
+        border: 3px solid red;
+    }
+    .blank img{
+        width: 100px;
+        height: 200px;
+    }
+    .blank{
+        display: flex;
+        justify-content: center;
+    }
+   
+    
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <img  src="image\logo.png">
+        <nav>
+      <ul>
+          <li><a href="home.html" target="_self">Home</a></li>
+          <li><a href="about.html" target="_self">About</a></li>
+          <li><a href="brand.html" target="_self">Brand</a> </li>
+          <li><a href="specials.html" target="_self">Specials</a></li>
+          <li><a href="contact.html" target="_self">Conact Us</a></li>
+          <li><a  href="#"><img src="image\search_icon.png"></a></li>
+      </ul>
+    </nav>
+        
+    </header>
+    <section class="image_cont">
+        <img src="image\banner.jpg">
+        <section class="caption">ALL NEW PHONES<br>
+        <span>UPTO 25% FLAT SALE</span><br>
+        <section class="logo">
+            <img src="image/twitter_logo.png">
+            <img src="image/fb_logo.png">
+            <img src="image/instagram_logo.png">
+
+        </section>
+    </section>
+    </section>
+    <section class="about" >
+        <img class="sub_about" src="image\about.png">
+        <p class="sub_about1">About Us<br>
+            <span>Mobile shop</span><br>
+            Vivo Electronics Corp. is a phone brand based in Dongguan, Guangdong, China. It was founded in 2009. The company is another Chinese smartphone maker to enter India recently. It makes low-cost Android phones, and those in the mid-range segment of the market.
+        </p>
+    </section>
+    <h1 style="text-align: center;">Brands</h1>
+<main>
+    <section class="sec">
+        <figure><img class="phn" src="image/1.png">
+        <figcaption>pavan<br><span>$1000</span></figcaption>
+        <figcaption class="star" >
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+        </figcaption>
+    </figure>
+    <figure><img class="phn" src="image/2.png">
+        <figcaption>vivo<br><span>$1000</span></figcaption>
+        <figcaption class="star" >
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+        </figcaption>
+    </figure>
+    <figure><img class="phn" src="image/3.png">
+        <figcaption>vivo<br><span>$1000</span></figcaption>
+        <figcaption class="star" >
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+        </figcaption>
+    </figure>
+    <figure><img class="phn" src="image/4.png">
+        <figcaption>vivo<br><span>$1000</span></figcaption>
+        <figcaption class="star" >
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+        </figcaption>
+    </figure>
+    <figure><img class="phn" src="image/5.png">
+        <figcaption>vivo<br><span>$1000</span></figcaption>
+        <figcaption class="star" >
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+        </figcaption>
+    </figure>
+    <figure><img class="phn" src="image/6.png">
+        <figcaption>vivo<br><span>$1000</span></figcaption>
+        <figcaption class="star" >
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+            <img class="size" src="image/star.png">
+        </figcaption>
+    </figure>
+    </section>  
+</main>  
+<h1 class="contact">contact</h1>
+    
+    
+<form>
+    <input class="half" type="text" placeholder="enter name" required>
+    <input class="half" type="text" placeholder="enter name" required><br>
+    <input class="full" type="text" placeholder="enter name" required><br>
+    <textarea placeholder="enter text"></textarea><br>
+            <input class="submit" type="submit" placeholder="submit">
+</form>
+
+
+    <footer>
+        <h1>Address</h1><hr>
+    <p>subbarao nagar high school,67-10-9/2,ramdas peta</p>
+    <p>+91-919191919</p>
+    <p>sai@gmail.com</p>
+    <p><ol>
+        <li><a href="home.html">home</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">reach</a></li>
+        <li><a href="#">contact us</a></li>
+    </ol></p>
+    </footer>
+</body>

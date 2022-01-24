@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .head{display: flex;}
+            .head-row1 ol{flex: 1;}
+            .head-row2{flex: 3;}
+            nav li{flex: 1;text-align: center;list-style: none;padding-top: 1.5%;}
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: larger;
+            }
+             .head{
+                background-image: url('../../Assignments/Mobile_Cart/image/back_head.png');
+            }
+           nav ol{
+                display: flex;
+                 width: 72%;
+                padding-left: 18%;
+            }
+             .circle{
+                height: 150px;
+                width: 255px;
+                background-repeat: no-repeat;
+                background-image: url("../../Assignments/Mobile_Cart/image/logo1.png");
+                color: white;
+                border-radius: 50%;
+                 position: relative;
+                top: 20px; 
+                
+               
+                line-height: 0px;
+                text-align: center;
+                animation-name: ani;
+                animation-delay: 2s;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 3;
+            }
+
+           
+           @keyframes ani{
+               from{
+                   left: 0%;
+                   transform: rotate(0deg);
+               }
+               to{
+                   left: 50%;
+                   transform: rotate(360deg);
+               }
+           } 
+           .main1{
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-around;
+               background-color: gray;
+           }
+         .main1 section{
+           background-color: white;
+            border: 2px solid red;
+            width: 30%;
+            margin: 10px;
+        
+            
+
+         }
+           
+            </style>
+
+    </head>
+    <body>
+    
+       <header class="head"> 
+             <section class="head-row1"><img src="../../Assignments/Mobile_Cart/image\logo.png"></section>
+             <nav class="head-row2">
+                 <ol>
+                     <li><a href="home.html">Home</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Brand</a></li>
+                     <li><a href="#">Specials</a></li>
+                     <li><img src="../../Assignments/Mobile_Cart/image/search_icon.png"></li>
+                </ol>
+             </nav>
+        </header>
+        <h1 class="circle">hai</h1>
+
+    <main>
+        <section class="main1"> 
+            <section>1</section>
+            <section>2</section>
+            <section>3</section>
+            <section>3</section>
+            <section>3</section>
+        </section>
+    </main>
+    
+     
+    </body>
+</html>

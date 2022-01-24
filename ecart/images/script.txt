@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        input{
+            padding: 6px;
+            margin-top: 20px;
+        }
+        .hide{
+            
+            display: none;
+        }
+        .error{
+            color: red;
+            font-size: 20px;
+
+        }
+        .img{
+            display: inline-block;       
+        }
+
+    </style>
+    </head>
+    <body>
+        <h1>Validations</h1>
+        <section>   
+        <label>ENTER AADHAR NUMBER:</label>
+        <input type="text" name="aadhhar" id="aadhharno" onfocusout="validateAadhaar()" placeholder="Enter 12 digit aadhar">
+        <img src=".\images\tick.png" width="40px" height="40px"  alt="hai" id="img" class="hide">
+        <span class="hide error" id="error">!enter valid aadhar</span>
+        
+        </section>
+        <section>   
+            <label>ENTER PAN NUMBER:</label>
+            <input type="text" name="aadhhar" id="panno" onfocusout="validatepan()" placeholder="enter pan number">
+            <img src=".\images\tick.png" width="40px" height="40px"  alt="hai" id="img1" class="hide">
+            <span class="hide error" id="error1">!enter valid pan</span>
+            
+            </section>
+            <h2>Regexp</h2>
+        <h3 id="ch"></h3>
+         <input type="text" placeholder="enter email here" id="in">
+         <button id="sub">submit</button>
+
+
+        <script> function validateAadhaar(){ 
+            var regexp = /^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$/; 
+            var ano = document.getElementById("aadhharno").value; 
+            
+            if(regexp.test(ano)) { 
+                document.getElementById("img").style.display="Inline-block";
+                document.getElementById("error").style.display="none";
+            console.log("valid Aadhaar Number");
+           
+            return true; 
+            }else{ 
+                document.getElementById("error").style.display="Inline-block";
+                document.getElementById("img").style.display="none";
+             return false; 
+            } } 
+
+            function validatepan(){ 
+                var regexp = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/;
+            var ano1 = document.getElementById("panno").value; 
+            
+            if(regexp.test(ano1)) { 
+                document.getElementById("img1").style.display="Inline-block";
+                document.getElementById("error1").style.display="none";
+            console.log("valid pan Number");
+           
+            return true; 
+            }else{ 
+                document.getElementById("error1").style.display="Inline-block";
+                document.getElementById("img1").style.display="none";
+                console.log("valid ipan Number");
+            }
+        }
+
+        document.getElementById("sub").addEventListener('click',function(event){
+                event.preventDefault();
+                let text=document.getElementById("in").value;
+                let pattern=/@gmail.com/i;
+                let result=pattern.test(text);
+                //document.getElementById("ch").innerHTML=result; 
+                if(result==true){
+                    document.getElementById("in").style.border='6px solid green';
+                } 
+                else{
+                    document.getElementById("in").style.border='6px solid red';
+                }
+            })
+            </script>
+
+    </body>
+</html>

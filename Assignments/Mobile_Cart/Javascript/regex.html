@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input{
+                padding: 7px;
+
+            }
+            </style>
+
+    </head>
+    <body>
+        <h2>Regexp</h2>
+        <h3 id="ch"></h3>
+         <input type="text" placeholder=" check here" id="in">
+         <button id="sub">submit</button>
+        <script>
+           /* Regexp:A regular expression is a pattern of characters.
+
+                The pattern is used to do pattern-matching "search-and-replace" functions on text.
+
+                In JavaScript, a RegExp Object is a pattern with Properties and Methods.*/
+            document.getElementById("sub").addEventListener('click',function(event){
+                event.preventDefault();
+                let text=document.getElementById("in").value;
+                let pattern=/@gmail.com/i;
+                let result=pattern.test(text);
+                //document.getElementById("ch").innerHTML=result; 
+                if(result==true){
+                    document.getElementById("in").style.border='2px solid green';
+                } 
+                else{
+                    document.getElementById("in").style.border='2px solid red';
+                }
+            })
+                
+
+        </script>
+    </body>
+
+</html>

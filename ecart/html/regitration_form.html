@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+<title>title</title>
+   <style>
+       .container{
+           flex: 1;
+       }
+       form input{
+           width: 70%;
+           padding: 5px;
+           
+        
+       }
+    
+       body{
+           background-color: rosybrown;
+       }
+       label,P{
+           font-style: italic;
+       }
+       .form1{
+           width: 10%;
+       }
+       img{
+           
+    opacity: 50%;
+    width: 80%;
+    height: 10%;
+
+
+       }
+       textarea{
+           width: 65%;
+           padding: 15px;
+           
+
+
+       }
+       /* body{
+           background-image: url("https://media.istockphoto.com/photos/sunset-at-the-new-river-gorge-bridge-in-west-virginia-picture-id597974096?b=1&k=20&m=597974096&s=170667a&w=0&h=0s7XUMTMzldWorvSKChuU_TBgZrpXJDQR5xs196GGp8= " -webkit-radial-gradient());
+    
+       } */
+       .sub{
+           width: 30%;
+           color:blanchedalmond;
+           background-color: black;
+           
+
+       }
+   </style>
+    </head>
+    <body>
+
+
+              <h1 style="background-color: black;color: red;padding: 30px;font-style: italic;">Registration form</h1>
+        <div style="display: flex; padding: 30px;">
+        <div class="container">
+            <form action="#">
+                <label>First name:</label><br>
+                <input type="text" name="fname" value="" required autofocus><br><br>
+                <label>Last name:</label><br>
+                <input type="text"name="lname" value="" required><br><br>
+                <label>Phone number:</label><br>
+                <input type="text" name="fname" value="" required><br><br>
+                <label>Email:</label><br>
+                <input type="email" name="fname" value="" required><br><br>
+               
+                <!-- <form action="#" style="display: flex;"> -->
+                    <p style="display: flex;padding: px;">Choose your gender:</p>
+                  <input style="flex: 1;margin-left: -30px;" class="form1" type="radio" id="html" name="fav_language" value="HTML">
+                  <label style="font-size: small;font-style: inherit;margin-left: -40px;" for="html">MALE</label><br>
+                  <input style="flex: 1;margin-left: -30px;" class="form1" type="radio" id="css" name="fav_language" value="CSS">
+                  <label  style="font-size: small;font-style: inherit;margin-left: -40px;"  for="css">FEMALE</label><br><br>
+                  
+                  
+                <!-- </form>  -->
+                
+                
+              </form> 
+        </div>
+        <div class="container">
+            <form action="#">
+                <label>Address:</label><br>
+                <input type="text" name="fname" value=""><br><br>
+  
+                
+                <label>Comments</label><br>
+                 <textarea placeholder="Enter your message here"></textarea><br><br>
+                <!-- <input style="width: 20%;"  type="submit" value="Submit"> -->
+                <input type="submit" class="sub">
+                
+              </form> 
+
+        </div>
+        </div>
+     
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initia-scale=1.0">
+        <style>
+            .parent{
+                /* float: left; */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+            }
+            section section{
+                /* float: left; */
+                /* flex: 1; */
+                background-color: orangered;
+                margin: 7px;
+                padding: 5px;
+                /* width: 13%; */
+               width: 20%;
+              }
+              @media only screen and (max-width:568px) {
+                  .parent{
+                      flex-direction: column;
+                    
+                  }
+                  section section{
+                      width: 90%;
+                  }
+              }
+
+        </style>
+    </head>
+    <body>
+        <section class="parent">
+            <section>1</section>
+            <section>2</section>
+            <section>3</section>
+            <section>4</section>
+            <section>5</section>
+            <section>1</section>
+            <section>2</section>
+            <section>3</section>
+            
+        </section>
+
+    </body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>mobile-specification-using-javascript</title>
+    <style>
+        body{
+            background-color:skyblue;
+        }
+        #fassured{
+            width: 100px;
+        }
+        section{
+            display: flex;
+        }
+         div{
+            padding: 40px 20px 0 150px;
+        }
+
+        #mobilepic{
+             padding: 30px 50px 0px 80px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <img src="mobilepic.jpeg" alt="image" id="mobilepic">
+    <div>
+        <h2>realme C25_Y(Metal Grey 128GB)</h2>
+    <p id="box"></p>
+</div>
+<div>
+<h2>₹10,499 <span><img src="fassured.png" alt="flipkartassured" id="fassured"></span></h2>
+
+<p id="item"><s>13,999</s></p>
+    </div>
+    </section>
+    <script>
+        var mobile_specifications='<p>'
+        for(var i=0;i<1;i++){
+            mobile_specifications+="<li>4GB RAM 64GB rom Expandable upto 128GB</li>";
+             mobile_specifications+="<li>16.51cm(6.1inches)HD Display</li>";
+              mobile_specifications+="<li>50Mp+2mp+4Mp main camera 8mp rear camera</li>";
+               mobile_specifications+="<li>5000 MAh lithium Ion Battery</li>";
+                mobile_specifications+="<li>unisoc t1681 Processor</li>";
+                 mobile_specifications+="<li>1 Year Domestic Warrenty</li>";
+                  mobile_specifications+="<li>Charger and Earphones are Provided</li>";
+                   mobile_specifications+="<li>No warrenty for Charger</li>";
+                    mobile_specifications+="<li>Replacement is not provided</li>";
+                 }
+                  mobile_specifications+="</p>";
+                  document.getElementById("box").innerHTML=mobile_specifications;
+                  var price='<p>'
+                  for (var j =0;j<1; j++) {
+                    price += "<li>₹13,999 &nbsp <a>25% off</a></li>";
+                    price += "<li>Free delivery</li>";
+                    price += "<li>Upto <b>₹9,950</b> Off on Exchange</li>";
+                  }
+                         price +='</p>';
+                         document.getElementById("item").innerHTML=price;
+    
+    
+    </script>
+</body>
+</html>
