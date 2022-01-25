@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.footer_bg{
+  background-color: #3e4551
+}
+.height{
+  height:700px
+}
