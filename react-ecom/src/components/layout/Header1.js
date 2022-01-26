@@ -1,56 +1,60 @@
-let Header = ()=>{
+let Header = ()=>{//arrow function is es6 concept we use arrow function in react components to avoid confusion among developers.arrow function is mostly used in the react components
+    let menus=["HOME1","TRANING","CLIENT","BLOG","ABOUT"];
+    
     return (   
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
-    <div class="container-fluid">
-        <img src="https://www.10000coders.co/assets/10000coders-logo.png?v=1.0" alt="logo" class="bg-white m-3 " width="10%"/>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark ">
+    <div className="container-fluid">
+        <img src="https://www.10000coders.co/assets/10000coders-logo.png?v=1.0" alt="logo" className="bg-white m-3 " width="10%"/>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                    <a class="nav-link active text-danger m-3 active" aria-current="page" href="#">Home</a>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li className="nav-item">
+                    <a className="nav-link active text-danger m-3 active" aria-current="page" href="#">
+                        {menus[0]}
+                        </a>
                 </li>
               
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white m-3" href="#" id="navbarDropdown" role="button"
+                <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle text-white m-3" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Training
+                        {menus[1]}
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="web_development.html">Web devlopment</a></li>
-                        <li><a class="dropdown-item" href="cloud_compute.html">Cloud computing</a></li>
+                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a className="dropdown-item" href="web_development.html">Web devlopment</a></li>
+                        <li><a className="dropdown-item" href="cloud_compute.html">Cloud computing</a></li>
                         <li>
-                            <hr class="dropdown-divider"/>
+                            <hr className="dropdown-divider"/>
                         </li>
-                        <li><a class="dropdown-item" href="mobile_development.html">Moblie Application</a></li>
+                        <li><a className="dropdown-item" href="mobile_development.html">Moblie Application</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white m-3" href="client.html">Client</a>
+                <li className="nav-item">
+                    <a className="nav-link text-white m-3" href="client.html">{menus[2]}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white m-3" href="blog.html">Blog</a>
+                <li className="nav-item">
+                    <a className="nav-link text-white m-3" href="blog.html">{menus[3]}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white m-3" href="about.html">About</a>
+                <li className="nav-item">
+                    <a className="nav-link text-white m-3" href="about.html">{menus[4]}</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form className="d-flex">
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
-                <li class="nav-item">
-                    <a class="nav-link active bg-dark" aria-current="page" href="#loginform">
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
+                <li className="nav-item">
+                    <a className="nav-link active bg-dark" aria-current="page" href="#loginform">
+                        <button type="button" className="btn btn-secondary" data-bs-toggle="modal"
                             data-bs-target="#myModal">Log in</button></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#exampleModal">
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                <li className="nav-item">
+                    <a className="nav-link" href="#exampleModal">
+                        <button type="button" className="btn btn-danger" data-bs-toggle="modal"
                             data-bs-target="#myModal1">Register</button></a>
                             </li>
             </ul>
