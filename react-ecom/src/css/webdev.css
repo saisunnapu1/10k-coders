@@ -1,0 +1,19 @@
+.body{
+    background-image: url("../Images/pictures/bc-dark.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+nav{
+    border: 2px solid white;
+    border-top: 2px solid red;
+}
+.fsh{
+    height: 200px;
+
+}
+.sh{
+    height: 800px;
+}
+.text{
+    color: white;
+}

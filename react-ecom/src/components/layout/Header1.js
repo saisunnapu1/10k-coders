@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 let Header = ()=>{//arrow function is es6 concept we use arrow function in react components to avoid confusion among developers.arrow function is mostly used in the react components
     let menus=["HOME1","TRANING","CLIENT","BLOG","ABOUT"];
     
@@ -13,9 +15,12 @@ let Header = ()=>{//arrow function is es6 concept we use arrow function in react
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li className="nav-item">
-                    <a className="nav-link active text-danger m-3 active" aria-current="page" href="#">
+                    {/* <a className="nav-link active text-danger m-3 active" aria-current="page" href="#">
                         {menus[0]}
-                        </a>
+                        </a> */}
+                        <Link to="/" className="nav-link active text-danger m-3 active" aria-current="page">
+                        {menus[0]}
+                        </Link>
                 </li>
               
                 <li className="nav-item dropdown">
@@ -24,22 +29,46 @@ let Header = ()=>{//arrow function is es6 concept we use arrow function in react
                         {menus[1]}
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item" href="web_development.html">Web devlopment</a></li>
-                        <li><a className="dropdown-item" href="cloud_compute.html">Cloud computing</a></li>
+                        <li>
+                        {/* <a className="dropdown-item" href="web_development.html">Web devlopment</a> */}
+                        <Link to="/web-development" className="dropdown-item">
+                        Web development
+                        </Link>
+                        </li>
+                        <li>
+                        {/* <a className="dropdown-item" href="cloud_compute.html">Cloud computing</a> */}
+                         <Link to="/cloud" className="dropdown-item">
+                      Cloud computing
+                        </Link>
+                        </li>
                         <li>
                             <hr className="dropdown-divider"/>
                         </li>
-                        <li><a className="dropdown-item" href="mobile_development.html">Moblie Application</a></li>
+                        <li>
+                        {/* <a className="dropdown-item" href="mobile_development.html">Moblie Application</a> */}
+                          <Link to="/mobile-development" className="dropdown-item">
+                      Moblie Application
+                        </Link>
+                        </li>
                     </ul>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link text-white m-3" href="client.html">{menus[2]}</a>
+                    {/* <a className="nav-link text-white m-3" href="client.html">{menus[2]}</a> */}
+                      <Link to="/client" className="nav-link text-white m-3" >
+                      {menus[2]}
+                        </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link text-white m-3" href="blog.html">{menus[3]}</a>
+                    {/* <a className="nav-link text-white m-3" href="blog.html">{menus[3]}</a> */}
+                    <Link to="/blog" className="nav-link text-white m-3" >
+                      {menus[2]}
+                        </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link text-white m-3" href="about.html">{menus[4]}</a>
+                    {/* <a className="nav-link text-white m-3" href="about.html">{menus[4]}</a> */}
+                    <Link to="/about" className="nav-link text-white m-3" 
+                     >{menus[4]}
+                    </Link>
                 </li>
             </ul>
             <form className="d-flex">
