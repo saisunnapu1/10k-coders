@@ -1,7 +1,8 @@
 import './css/header.css';
 let Header=()=>{
     return (
-        // <h1 class="text-center bg-danger">hai i am header  section</h1>
+      <>
+      
     <header id="header" class="fixed-top d-flex align-items-center bg-danger">
     <div class="container d-flex align-items-center">
       <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>
@@ -41,6 +42,21 @@ let Header=()=>{
       <a href="#about" class="get-started-btn scrollto">Get Started</a>
     </div>
     </header>
+    <section id="hero" class="d-flex align-items-center">
+
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-xl-6">
+          <h1>Bettter digital experience with Presento</h1>
+          <h2>We are team of talented designers making websites with Bootstrap</h2>
+          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  </>
+
     )
 }
 export default Header;

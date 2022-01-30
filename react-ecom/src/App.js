@@ -21,7 +21,7 @@ function App() {
     <Header/>
     <Routes>
         <Route path="/" element={   <MainContent/>}/>
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About developer="sai99" />} />
         <Route path="/web-development" element={<WebDev/>} />
          <Route path="/mobile-development" element={<MobDev/>} />
           <Route path="/cloud" element={<Cloud/>} />

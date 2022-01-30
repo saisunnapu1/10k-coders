@@ -5,7 +5,7 @@ let Client=()=>{
         
                 
         <table class="table table-hover">
-            <h2 >Our Clients</h2>
+            Our Clients
           <thead>
             <tr>
               <th>Firstname</th>
