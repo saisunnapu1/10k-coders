@@ -61,7 +61,7 @@ let Header = ()=>{//arrow function is es6 concept we use arrow function in react
                 <li className="nav-item">
                     {/* <a className="nav-link text-white m-3" href="blog.html">{menus[3]}</a> */}
                     <Link to="/blog" className="nav-link text-white m-3" >
-                      {menus[2]}
+                      {menus[3]}
                         </Link>
                 </li>
                 <li className="nav-item">

@@ -1,13 +1,20 @@
 
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './components/class/Footer';
+import Crud from './components/functional/hooks/crud';
+import FavoriteColor from './components/functional/hooks/usestate';
+
+
+
 
 function App() {
   return (
-    <>     
-    <Header/>
-    <Footer/>
+    <>    
+    <Crud/>
+    {/* <Crud/> */}
+ 
+  {/* <FavoriteColor/> */}
+ 
     </>
   );
 }

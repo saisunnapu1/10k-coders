@@ -12,6 +12,10 @@ import MobDev from './containers/Mobile-dev';
 import Cloud from './containers/Cloud';
 import Blog from './containers/Blog';
 import Client from './containers/Client';
+import Axios from './components/layout/Axios';
+import Hooks from './components/layout/Hooks';
+import StateManagement from './components/layout/StateManagement';
+
 
 
 function App() {
@@ -21,12 +25,18 @@ function App() {
     <Header/>
     <Routes>
         <Route path="/" element={   <MainContent/>}/>
-        <Route path="/about" element={<About developer="sai99" />} />
+        <Route path="/about" element={<About developer="sai1999" />} />
         <Route path="/web-development" element={<WebDev/>} />
          <Route path="/mobile-development" element={<MobDev/>} />
           <Route path="/cloud" element={<Cloud/>} />
            <Route path="/blog" element={<Blog/>} />
             <Route path="/client" element={<Client/>} />
+            <Route path="/axios" element={<Axios/>} />
+            <Route path='/hooks' element={<Hooks/>}/>
+            <Route path='/services' element={<StateManagement/>}/>
+            
+         
+            
 
       </Routes>
 
