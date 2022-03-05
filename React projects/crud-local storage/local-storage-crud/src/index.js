@@ -4,6 +4,7 @@ import './index.css';
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import './fontAwesome';
 
 
 ReactDOM.render(

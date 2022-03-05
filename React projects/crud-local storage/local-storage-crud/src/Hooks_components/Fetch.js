@@ -13,6 +13,7 @@ function Fetch() {
                 
                 facts.push(res.data.text);
                 setFacts(facts)
+                // setFacts(res.data.text)
                
             })
         },[id]
